@@ -66,7 +66,7 @@
     <article id="post-vue全局api详解" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/wanghailing.github.io/2019/10/18/vue%E5%85%A8%E5%B1%80api%E8%AF%A6%E8%A7%A3/" class="article-date">
-  <time datetime="2019-10-18T03:05:51.841Z" itemprop="datePublished">2019-10-18</time>
+  <time datetime="2019-10-18T07:29:05.804Z" itemprop="datePublished">2019-10-18</time>
 </a>
     
   </div>
@@ -145,8 +145,8 @@
 <p><strong>再定义一个子页面观察数据：</strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//Detail.vue</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"detail"</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">detail-header</span>&gt;</span><span class="tag">&lt;/<span class="name">detail-header</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"changeName(name2)"</span>&gt;</span>子页面修改name<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>store中name：&#123;&#123;name&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span>  </span><br><span class="line"><span class="javascript">    <span class="keyword">import</span> DetailHeader <span class="keyword">from</span> <span class="string">'../components/DetailHeader'</span>  </span></span><br><span class="line"><span class="javascript">    <span class="keyword">import</span> &#123;store,mutations&#125; <span class="keyword">from</span> <span class="string">'@/store'</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;  </span></span><br><span class="line">        components: &#123;  </span><br><span class="line">            DetailHeader  </span><br><span class="line">        &#125;  ,</span><br><span class="line">        data()&#123;</span><br><span class="line"><span class="actionscript">            <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="actionscript">                name2:<span class="string">'子页的name'</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        computed:&#123;</span><br><span class="line">            name()&#123;</span><br><span class="line"><span class="actionscript">                <span class="keyword">return</span> store.name</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            changeName:mutations.changeName</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>子页面显示如图：<br><img src="https://segmentfault.com/img/bVbs6UG?w=1362&h=216" alt="clipboard.png"></p>
-<p>我们简单点击下按钮，改变下store中的数据，效果如下：<br><img src="https://segmentfault.com/img/bVbs6Zn?w=640&h=435" alt="图片描述"></p>
+<p>子页面显示如图：<br><img src="https://image-static.segmentfault.com/221/428/2214280570-5ce9013a00014_articlex" alt="clipboard.png"></p>
+<p>我们简单点击下按钮，改变下store中的数据，效果如下：<br><img src="https://image-static.segmentfault.com/211/599/2115996450-5ce9089883daa_articlex" alt="图片描述"></p>
 <p>最后补充一点，就是如果当前项目vue版本低于2.6，要使用Vue.observable()，就必须要升级，升级 vue 和 vue-template-compiler，两者的版本需要同步，如果不同步项目会报错。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//升级vue版本</span></span><br><span class="line">npm update vue -S 或者 yarn add vue -S</span><br><span class="line">npm update vue-template-compiler -D 或者 yarn add vue-template-compiler -D</span><br></pre></td></tr></table></figure>
 
@@ -155,7 +155,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/18/vue%E5%85%A8%E5%B1%80api%E8%AF%A6%E8%A7%A3/" data-id="ck1vt56pi0001ogvuda3s6rpb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/18/vue%E5%85%A8%E5%B1%80api%E8%AF%A6%E8%A7%A3/" data-id="ck1vtcxkh000118vu9xdk9ujx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -357,7 +357,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/16/pythonstudy/" data-id="ck1vt56px0002ogvu2q376nbm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/16/pythonstudy/" data-id="ck1vtcxkv000218vu33zbazqd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -406,7 +406,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/16/hello-world/" data-id="ck1vt56ox0000ogvu1kxq35ad" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/16/hello-world/" data-id="ck1vtcxjz000018vu22jq7d49" class="article-share-link">Share</a>
       
       
     </footer>
