@@ -63,6 +63,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vue基础填坑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/wanghailing.github.io/2019/10/18/vue%E5%9F%BA%E7%A1%80%E5%A1%AB%E5%9D%91/" class="article-date">
+  <time datetime="2019-10-18T09:40:00.396Z" itemprop="datePublished">2019-10-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/wanghailing.github.io/2019/10/18/vue%E5%9F%BA%E7%A1%80%E5%A1%AB%E5%9D%91/">vue基础填坑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在vue中尽量不使用箭头函数</p>
+<h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><p>在vue中，data为保证是响应式数据，对象必须是纯粹的对象；</p>
+<p>在组件中的data必须声明返回一个初始数据对象的函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 直接创建一个实例</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line">vm.a <span class="comment">// =&gt; 1</span></span><br><span class="line">vm.$data === data <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Vue.extend() 中 data 必须是函数</span></span><br><span class="line"><span class="keyword">var</span> Component = Vue.extend(&#123;</span><br><span class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="require"><a href="#require" class="headerlink" title="require"></a>require</h2><p>在vue的js中引入图片路径需要使用require()，否则js会默认看出是一串字符串，在标签中动态生成图片路径的时候，也需要使用require</p>
+<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><p>动态的创建ref,并通过该ref获取组件，在正常的动态创建ref，关键在于获取，获取时一定要用[0] ！！！ this.$ref[‘wrapper’+i][0]，</p>
+<h2 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h2><p>在v-for循环生成的list中的每个标签添加一个属性，需要使用this.$nextick()</p>
+<h2 id="computed和watch的区别"><a href="#computed和watch的区别" class="headerlink" title="computed和watch的区别"></a>computed和watch的区别</h2><h3 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h3><p>是计算值，主要应用就是简化template里面双大括号的计算和处理props或$emit的传值，具有缓存性，计算属性会立即返回之前的计算结果，而不必再次执行函数</p>
+<h3 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h3><p>是观察动作，主要应用监听props，$emit或本组件的值执行异步操作，无缓存性，页面重新渲染时值不变化也会执行</p>
+<h2 id="华为自带的浏览器position：fixed的兼容问题"><a href="#华为自带的浏览器position：fixed的兼容问题" class="headerlink" title="华为自带的浏览器position：fixed的兼容问题"></a>华为自带的浏览器position：fixed的兼容问题</h2><p>将bottom：auto即可。</p>
+<h2 id="驼峰命名法和短横线命名法"><a href="#驼峰命名法和短横线命名法" class="headerlink" title="驼峰命名法和短横线命名法"></a>驼峰命名法和短横线命名法</h2><p>在DOM里接受用短横线命名，在js读取的时候用驼峰读取：</p>
+<p>接收：:c-msg=’msg’</p>
+<p>props/读取：cMsg/this.cMsg</p>
+<p>如果感觉有点麻烦可以全用小写。</p>
+<h2 id="事件总线（event-bus）"><a href="#事件总线（event-bus）" class="headerlink" title="事件总线（event bus）"></a>事件总线（event bus）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bus = <span class="keyword">new</span> Vue()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 发送数据</span></span><br><span class="line">bus.$emit(<span class="string">'todo'</span>, <span class="string">'we are 伐木累'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 接收数据</span></span><br><span class="line">bus.$on(<span class="string">'todo'</span> arg =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'接收过来的'</span>, arg)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/18/vue%E5%9F%BA%E7%A1%80%E5%A1%AB%E5%9D%91/" data-id="ck22qam310001xcvuh03h154a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vue全局api详解" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/wanghailing.github.io/2019/10/18/vue%E5%85%A8%E5%B1%80api%E8%AF%A6%E8%A7%A3/" class="article-date">
@@ -155,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/18/vue%E5%85%A8%E5%B1%80api%E8%AF%A6%E8%A7%A3/" data-id="ck1vu8wfs0002wovu9bwp89km" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/18/vue%E5%85%A8%E5%B1%80api%E8%AF%A6%E8%A7%A3/" data-id="ck22qam3i0002xcvu8uhr71gk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -357,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/16/pythonstudy/" data-id="ck1vu8wfr0001wovudehv4k51" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/16/pythonstudy/" data-id="ck22qam3r0003xcvu4pxd2nuu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -406,7 +459,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/16/hello-world/" data-id="ck1vu8wew0000wovu78r239tz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/16/hello-world/" data-id="ck22qam2u0000xcvu1pw10e0g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -445,6 +498,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/wanghailing.github.io/2019/10/18/vue%E5%9F%BA%E7%A1%80%E5%A1%AB%E5%9D%91/">vue基础填坑</a>
+          </li>
         
           <li>
             <a href="/wanghailing.github.io/2019/10/18/vue%E5%85%A8%E5%B1%80api%E8%AF%A6%E8%A7%A3/">vue归纳总结</a>
