@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>react学习之路（二） | 王海灵的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="react学习之路（二）React 高级指引无障碍网络无障碍辅助功能（Accessibility，也被称为 a11y，因为以 A 开头，以 Y 结尾，中间一共 11 个字母）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。 React 对于创建可访问网站有着全面的支持，而这通常是通过标准 HTML 技术实现的。 其实和HTML语义化相似。 React">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react学习之路（二）">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;24&#x2F;react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89&#x2F;index.html">
+<meta property="og:site_name" content="王海灵的博客">
+<meta property="og:description" content="react学习之路（二）React 高级指引无障碍网络无障碍辅助功能（Accessibility，也被称为 a11y，因为以 A 开头，以 Y 结尾，中间一共 11 个字母）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。 React 对于创建可访问网站有着全面的支持，而这通常是通过标准 HTML 技术实现的。 其实和HTML语义化相似。 React">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-04T05:25:45.363Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/wanghailing.github.io/atom.xml" title="王海灵的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/wanghailing.github.io/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/wanghailing.github.io/" id="logo">王海灵的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/wanghailing.github.io/">Home</a>
+        
+          <a class="main-nav-link" href="/wanghailing.github.io/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/wanghailing.github.io/board">Board</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/wanghailing.github.io/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-react学习之路（二）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/wanghailing.github.io/2019/10/24/react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/" class="article-date">
+  <time datetime="2019-10-24T09:28:29.529Z" itemprop="datePublished">2019-10-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react学习之路（二）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="react学习之路（二）"><a href="#react学习之路（二）" class="headerlink" title="react学习之路（二）"></a>react学习之路（二）</h2><h1 id="React-高级指引"><a href="#React-高级指引" class="headerlink" title="React 高级指引"></a>React 高级指引</h1><h2 id="无障碍"><a href="#无障碍" class="headerlink" title="无障碍"></a>无障碍</h2><p>网络无障碍辅助功能（Accessibility，也被称为 <a href="https://en.wiktionary.org/wiki/a11y" target="_blank" rel="noopener"><strong>a11y</strong></a>，因为以 A 开头，以 Y 结尾，中间一共 11 个字母）是一种可以帮助所有人获得服务的设计和创造。无障碍辅助功能是使得辅助技术正确解读网页的必要条件。</p>
+<p>React 对于创建可访问网站有着全面的支持，而这通常是通过标准 HTML 技术实现的。</p>
+<p>其实和HTML语义化相似。</p>
+<h2 id="React-lazy"><a href="#React-lazy" class="headerlink" title="React.lazy"></a>React.lazy</h2><p>注意:</p>
+<p><code>React.lazy</code> 和 Suspense 技术还不支持服务端渲染。如果你想要在使用服务端渲染的应用中使用，我们推荐 <a href="https://github.com/smooth-code/loadable-components" target="_blank" rel="noopener">Loadable Components</a> 这个库。它有一个很棒的<a href="https://github.com/smooth-code/loadable-components/blob/master/packages/server/README.md" target="_blank" rel="noopener">服务端渲染打包指南</a>。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> OtherComponent = React.lazy(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./OtherComponent'</span>));</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyComponent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;OtherComponent /&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 这个代码将会在渲染组件时，自动导入包含 OtherComponent 组件的包。</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ React.lazy 接受一个函数，这个函数需要动态调用 import()。它必须返回一个 Promise，该 Promise 需要 resolve 一个 defalut export 的 React 组件。</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ Loadable Components</span></span><br><span class="line"><span class="regexp">import loadable from '@loadable/</span>component<span class="string">'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">const OtherComponent = loadable(() =&gt; import('</span>./OtherComponent<span class="string">'))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">function MyComponent() &#123;</span></span><br><span class="line"><span class="string">  return (</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">      &lt;OtherComponent /&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  )</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Suspense"><a href="#Suspense" class="headerlink" title="Suspense"></a>Suspense</h3><p> 如果在 <code>MyComponent</code> 渲染完成后，包含 <code>OtherComponent</code> 的模块还没有被加载完成，我们可以使用加载指示器为此组件做优雅降级。这里我们使用 <code>Suspense</code> 组件来解决。 </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> OtherComponent = React.lazy(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./OtherComponent'</span>));</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyComponent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;Suspense fallback=&#123;&lt;div&gt;Loading...&lt;<span class="regexp">/div&gt;&#125;&gt;</span></span><br><span class="line"><span class="regexp">        &lt;OtherComponent /</span>&gt;</span><br><span class="line">      &lt;<span class="regexp">/Suspense&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> <code>fallback</code> 属性接受任何在组件加载过程中你想展示的 React 元素。你可以将 <code>Suspense</code> 组件置于懒加载组件之上的任何位置。你甚至可以用一个 <code>Suspense</code> 组件包裹多个懒加载组件。 </p>
+<h3 id="基于路由的代码分割"><a href="#基于路由的代码分割" class="headerlink" title="基于路由的代码分割"></a>基于路由的代码分割</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; BrowserRouter <span class="keyword">as</span> Router, Route, Switch &#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span>;</span><br><span class="line"><span class="keyword">import</span> React, &#123; Suspense, lazy &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Home = lazy(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./routes/Home'</span>));</span><br><span class="line"><span class="keyword">const</span> About = lazy(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./routes/About'</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> App = <span class="function"><span class="params">()</span> =&gt;</span> (</span><br><span class="line">  &lt;Router&gt;</span><br><span class="line">    &lt;Suspense fallback=&#123;&lt;div&gt;Loading...&lt;<span class="regexp">/div&gt;&#125;&gt;</span></span><br><span class="line"><span class="regexp">      &lt;Switch&gt;</span></span><br><span class="line"><span class="regexp">        &lt;Route exact path="/</span><span class="string">" component=&#123;Home&#125;/&gt;</span></span><br><span class="line"><span class="string">        &lt;Route path="</span>/about<span class="string">" component=&#123;About&#125;/&gt;</span></span><br><span class="line"><span class="string">      &lt;/Switch&gt;</span></span><br><span class="line"><span class="string">    &lt;/Suspense&gt;</span></span><br><span class="line"><span class="string">  &lt;/Router&gt;</span></span><br><span class="line"><span class="string">);</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="命名导出"><a href="#命名导出" class="headerlink" title="命名导出"></a>命名导出</h3><p> <code>React.lazy</code> 目前只支持默认导出（default exports）。如果你想被引入的模块使用命名导出（named exports），你可以创建一个中间模块，来重新导出为默认模块。这能保证 tree shaking 不会出错，并且不必引入不需要的组件。 </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ManyComponents.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> MyComponent = <span class="comment">/* ... */</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> MyUnusedComponent = <span class="comment">/* ... */</span>;</span><br><span class="line"><span class="comment">// MyComponent.js</span></span><br><span class="line"><span class="keyword">export</span> &#123; MyComponent <span class="keyword">as</span> <span class="keyword">default</span> &#125; <span class="keyword">from</span> <span class="string">"./ManyComponents.js"</span>;</span><br><span class="line"><span class="comment">// MyApp.js</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; lazy &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">const</span> MyComponent = lazy(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">"./MyComponent.js"</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h2><p>可以说这是一个全局变量，使用context没有props那么麻烦。可以避免通过中间元素传递props</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Context 可以让我们无须明确地传遍每一个组件，就能将值深入传递进组件树。</span></span><br><span class="line"><span class="comment">// 为当前的 theme 创建一个 context（“light”为默认值）。</span></span><br><span class="line"><span class="comment">// 创建一个 Context 对象。当 React 渲染一个订阅了这个 Context 对象的组件，这个组件会从组件树中离自身最近的那个匹配的 Provider 中读取到当前的 context 值。</span></span><br><span class="line"><span class="keyword">const</span> ThemeContext = React.createContext(<span class="string">'light'</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// 使用一个 Provider 来将当前的 theme 传递给以下的组件树。</span></span><br><span class="line">    <span class="comment">// 无论多深，任何组件都能读取这个值。</span></span><br><span class="line">    <span class="comment">// 在这个例子中，我们将 “dark” 作为当前的值传递下去。</span></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="comment">// Provider 接收一个 value 属性，传递给消费组件。一个 Provider 可以和多个消费组件有对应关系。多个 Provider 也可以嵌套使用，里层的会覆盖外层的数据。</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 当 Provider 的 value 值发生变化时，它内部的所有消费组件都会重新渲染。Provider 及其内部 consumer 组件都不受制于 shouldComponentUpdate 函数，因此当 consumer 组件在其祖先组件退出更新的情况下也能更新。</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 通过新旧值检测来确定变化，使用了与 Object.is 相同的算法。</span></span><br><span class="line">      &lt;ThemeContext.Provider value=<span class="string">"dark"</span>&gt;</span><br><span class="line">        &lt;Toolbar /&gt;</span><br><span class="line">      &lt;<span class="regexp">/ThemeContext.Provider&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 中间的组件再也不必指明往下传递 theme 了。</span></span><br><span class="line"><span class="regexp">function Toolbar(props) &#123;</span></span><br><span class="line"><span class="regexp">  return (</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;ThemedButton /</span>&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">class ThemedButton extends React.Component &#123;</span></span><br><span class="line"><span class="regexp">  /</span><span class="regexp">/ 指定 contextType 读取当前的 theme context。</span></span><br><span class="line"><span class="regexp">  /</span><span class="regexp">/ React 会往上找到最近的 theme Provider，然后使用它的值。</span></span><br><span class="line"><span class="regexp">  /</span><span class="regexp">/ 在这个例子中，当前的 theme 值为 “dark”。</span></span><br><span class="line"><span class="regexp">  static contextType = ThemeContext;</span></span><br><span class="line"><span class="regexp">  render() &#123;</span></span><br><span class="line"><span class="regexp">    return &lt;Button theme=&#123;this.context&#125; /</span>&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> Context 主要应用场景在于<em>很多</em>不同层级的组件需要访问同样一些的数据。请谨慎使用，因为这会使得组件的复用性变差。 </p>
+<p>! 注意： 在context中添加函数时，用普通形式的函数。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ThemeContext = React.createContext(&#123;<span class="attr">theme</span>: <span class="string">'light'</span>,<span class="attr">fn</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">'context'</span>)&#125;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cont</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(arg)&#123;</span><br><span class="line">        <span class="keyword">super</span>(arg)</span><br><span class="line">        <span class="keyword">this</span>.state = &#123;</span><br><span class="line">            theme: <span class="string">'dark'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    toggleTheme = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.setState(<span class="function"><span class="params">()</span> =&gt;</span> (&#123;</span><br><span class="line">            theme: <span class="keyword">this</span>.state.theme === <span class="string">'dark'</span> ? <span class="string">'light'</span> : <span class="string">'dark'</span> </span><br><span class="line">        &#125;))</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;ThemeContext.Provider value=&#123;&#123;<span class="attr">theme</span>: <span class="keyword">this</span>.state.theme, <span class="attr">fn</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="string">'222222'</span>)&#125;&#125;&#125;&gt;</span><br><span class="line">        &lt;Toolbar changeTheme=&#123;<span class="keyword">this</span>.toggleTheme&#125; /&gt;</span><br><span class="line">        &#123;<span class="keyword">this</span>.state.theme&#125;</span><br><span class="line">      &lt;<span class="regexp">/ThemeContext.Provider&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">function Toolbar(props) &#123;</span></span><br><span class="line"><span class="regexp">  return (</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;ThemedButton onClick=&#123;props.changeTheme&#125; /</span>&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">class ThemedButton extends React.Component &#123;</span></span><br><span class="line"><span class="regexp">  static contextType = ThemeContext;</span></span><br><span class="line"><span class="regexp">    shouldComponentUpdate() &#123;</span></span><br><span class="line"><span class="regexp">        console.log(this.context)</span></span><br><span class="line"><span class="regexp">        return true</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  render() &#123;</span></span><br><span class="line"><span class="regexp">    return &lt;button theme=&#123;this.context.theme&#125; onClick=&#123;() =&gt; &#123;this.props.onClick(); this.context.fn()&#125;&#125;  &gt;button&lt;/</span>button&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Cont</span><br></pre></td></tr></table></figure>
+
+<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><p> <strong>Ref 转发是一个可选特性，其允许某些组件接收 <code>ref</code>，并将其向下传递（换句话说，“转发”它）给子组件。</strong> </p>
+<p> <code>React.forwardRef</code> 来获取传递给它的 <code>ref</code>，然后转发到它渲染的 DOM </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> FancyButton = React.forwardRef(<span class="function">(<span class="params">props, ref</span>) =&gt;</span> (</span><br><span class="line">  &lt;button ref=&#123;ref&#125; className=<span class="string">"FancyButton"</span>&gt;</span><br><span class="line">    &#123;props.children&#125;</span><br><span class="line">  &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">));</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 你可以直接获取 DOM button 的 ref：</span></span><br><span class="line"><span class="regexp">const ref = React.createRef();</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 该 ref 的 current 属性将能拿到 dom 节点的实例：</span></span><br><span class="line"><span class="regexp">componentDidMount()&#123;</span></span><br><span class="line"><span class="regexp">    console.log(this.myRef.current.value);</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">&lt;FancyButton ref=&#123;ref&#125;&gt;Click me!&lt;/</span>FancyButton&gt;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Fragments"><a href="#Fragments" class="headerlink" title="Fragments"></a>Fragments</h2><p> React 中的一个常见模式是一个组件返回多个元素。Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点。 </p>
+<p>其实就是Fragments是react内置的一个组件，它本身不会渲染，但是可以用来包裹多个组件从而达到你想要的效果。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Table</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;table&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;Columns /&gt;</span><br><span class="line">        &lt;<span class="regexp">/tr&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>table&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Columns</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;td&gt;Hello&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">        &lt;td&gt;World&lt;/</span>td&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 得到的输出： </span></span><br><span class="line"><span class="regexp">&lt;table&gt;</span></span><br><span class="line"><span class="regexp">  &lt;tr&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;td&gt;Hello&lt;/</span>td&gt;</span><br><span class="line">      &lt;td&gt;World&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  &lt;<span class="regexp">/tr&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>table&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用 fragments</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Columns</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;React.Fragment&gt;</span><br><span class="line">        &lt;td&gt;Hello&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">        &lt;td&gt;World&lt;/</span>td&gt;</span><br><span class="line">      &lt;<span class="regexp">/React.Fragment&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 输出</span></span><br><span class="line"><span class="regexp">&lt;table&gt;</span></span><br><span class="line"><span class="regexp">  &lt;tr&gt;</span></span><br><span class="line"><span class="regexp">    &lt;td&gt;Hello&lt;/</span>td&gt;</span><br><span class="line">    &lt;td&gt;World&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>tr&gt;</span><br><span class="line">&lt;<span class="regexp">/table&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>fragments可以用更简短的语法声明。它看起来像空标签：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Columns</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;&gt;</span><br><span class="line">        &lt;td&gt;Hello&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">        &lt;td&gt;World&lt;/</span>td&gt;</span><br><span class="line">      &lt;<span class="regexp">/&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>有时用在一个集合映射到一个fragments数组时，需要加个key值，否则会发出警告</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Glossary</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;dl&gt;</span><br><span class="line">      &#123;props.items.map(<span class="function"><span class="params">item</span> =&gt;</span> (</span><br><span class="line">        <span class="comment">// 没有`key`，React 会发出一个关键警告</span></span><br><span class="line">        &lt;React.Fragment key=&#123;item.id&#125;&gt;</span><br><span class="line">          &lt;dt&gt;&#123;item.term&#125;&lt;<span class="regexp">/dt&gt;</span></span><br><span class="line"><span class="regexp">          &lt;dd&gt;&#123;item.description&#125;&lt;/</span>dd&gt;</span><br><span class="line">        &lt;<span class="regexp">/React.Fragment&gt;</span></span><br><span class="line"><span class="regexp">      ))&#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>dl&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h2><p> 具体而言，<strong>高阶组件是参数为组件，返回值为新组件的函数。</strong> </p>
+<p>差不多就这么多了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/24/react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="ck2ye4nqe0004owvu2hi73zjl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/wanghailing.github.io/2019/11/04/react-router-dom/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          react-router-dom
+        
+      </div>
+    </a>
+  
+  
+    <a href="/wanghailing.github.io/2019/10/23/react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">react学习之路（一）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/wanghailing.github.io/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/wanghailing.github.io/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/wanghailing.github.io/2019/11/06/redux/">redux</a>
+          </li>
+        
+          <li>
+            <a href="/wanghailing.github.io/2019/11/04/react-router-dom/">react-router-dom</a>
+          </li>
+        
+          <li>
+            <a href="/wanghailing.github.io/2019/10/24/react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/">react学习之路（二）</a>
+          </li>
+        
+          <li>
+            <a href="/wanghailing.github.io/2019/10/23/react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/">react学习之路（一）</a>
+          </li>
+        
+          <li>
+            <a href="/wanghailing.github.io/2019/10/18/vue%E5%9F%BA%E7%A1%80%E5%A1%AB%E5%9D%91/">vue基础填坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">你要设的名称</h3>
+        <div class="widget">
+            测试内容
+        </div>
+    </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Fred
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/wanghailing.github.io/" class="mobile-nav-link">Home</a>
+  
+    <a href="/wanghailing.github.io/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/wanghailing.github.io/board" class="mobile-nav-link">Board</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/wanghailing.github.io/fancybox/jquery.fancybox.css">
+  <script src="/wanghailing.github.io/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/wanghailing.github.io/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
